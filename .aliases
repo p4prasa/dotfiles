@@ -1,0 +1,7 @@
+alias python=/usr/local/bin/python3
+alias pip=/usr/local/bin/pip3
+alias anacondapython=/Users/prasad/Applications/anaconda3/bin/python
+alias anacondapip=/Users/prasad/Applications/anaconda3/bin/pip
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
