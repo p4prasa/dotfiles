@@ -7,6 +7,7 @@ brew 'tmux'
 brew 'htop'
 brew 'tldr'
 brew 'tree'
+brew 'git'
 
 cask 'brave-browser'
 cask 'iterm2'
