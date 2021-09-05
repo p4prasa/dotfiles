@@ -1,4 +1,4 @@
-# software update and cli tools install
+# 1 software update and cli tools install
 
 echo "\nupdating software...\n"
 sudo softwareupdate -i -a
@@ -8,7 +8,7 @@ echo "\nupdating cli tools...\n"
 xcode-select --install
 echo "\ncli tools update done.\n"
 
-# install oh-my-zsh
+# 2 install oh-my-zsh
 
 echo "\ninstalling oh-my-zsh...\n"
 
@@ -20,24 +20,24 @@ fi
 
 echo "\noh-my-zsh installation done.\n"
 
-# change shell to zsh
+# 3 change shell to zsh
 
 chsh -s $(which zsh)
 echo "\nshell changed to zsh.\n"
 
-# copy .zshrc and source (oh-my-zsh, alias, path)
+# 4 copy .zshrc and source (oh-my-zsh, alias, path)
 
-cp .zshrc ~/
-cp .omz_config ~/
-cp .aliases ~/
-cp .paths ~/
+ln -s .zshrc ~/
+ln -s .omz_config ~/
+ln -s .aliases ~/
+ln -s .paths ~/
 source ~/.zshrc
 
-# set mac os defaults
+# 5 set mac os defaults
 
 source .macos_defaults
 
-# install brew and install apps through home brew
+# 6 install brew and install apps through home brew
 
 # Check for Homebrew
 if test ! "$(command -v brew)"; then
@@ -52,7 +52,7 @@ brew bundle install
 echo "\nbrew bundle installation done.\n"
 
 
-# do mackup restore
+# 7 do mackup restore
 
 cp .mackup.cfg ~/
 echo "\nmackup restore\n"
